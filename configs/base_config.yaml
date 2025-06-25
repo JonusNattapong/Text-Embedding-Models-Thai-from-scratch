@@ -1,0 +1,69 @@
+# Base Configuration for Thai Embedding Model Training
+
+model:
+  vocab_size: 30000
+  d_model: 512
+  n_heads: 8
+  n_layers: 6
+  d_ff: 2048
+  max_seq_len: 512
+  dropout: 0.1
+  pooling_strategy: "mean"  # "mean", "cls", "max"
+
+training:
+  batch_size: 32
+  learning_rate: 1e-4
+  num_epochs: 10
+  warmup_steps: 1000
+  weight_decay: 0.01
+  gradient_clipping: 1.0
+  
+  # Loss function configuration
+  loss_function: "contrastive"  # "contrastive", "triplet", "cosine"
+  temperature: 0.07
+  margin: 0.2
+  
+  # Validation and checkpointing
+  validation_steps: 500
+  save_steps: 1000
+  early_stopping_patience: 3
+
+data:
+  # Data preprocessing
+  remove_stopwords: false
+  normalize_text: true
+  max_length: 512
+  augment_data: false
+  augmentation_factor: 2
+  
+  # Dataset splits
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+
+paths:
+  data_dir: "data"
+  output_dir: "checkpoints"
+  log_dir: "logs"
+  tokenizer_path: "tokenizer/thai_tokenizer.json"
+
+monitoring:
+  use_wandb: false
+  wandb_project: "thai-embedding"
+  log_level: "INFO"
+  
+tokenizer:
+  vocab_size: 30000
+  special_tokens:
+    - "[UNK]"
+    - "[CLS]"
+    - "[SEP]"
+    - "[PAD]"
+    - "[MASK]"
+
+evaluation:
+  similarity_metrics: true
+  clustering_metrics: true
+  retrieval_metrics: true
+  visualization: true
+  k_values: [1, 5, 10]
