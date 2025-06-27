@@ -1,13 +1,6 @@
 # <img src="assets/images/logo.png" alt="Thai Embedding Logo" width="120" style="vertical-align:middle; margin-right:10px;"/> Thai Text Embedding Model from Scratch
 
-<p align="center">
-  <img src="assets/images/image1.png" alt="Thai Text Embedding Visualization" width="350"/>
-  <img src="assets/images/image2.png" alt="Thai Text Processing Pipeline" width="350"/>
-</p>
 
-<p align="center">
-  <em>Left: t-SNE visualization of Thai text embeddings | Right: Thai text preprocessing and tokenization pipeline</em>
-</p>
 
 A modern, extensible codebase for building Thai text embedding models from scratch. This project is designed for both researchers and practitioners who want to understand, train, and experiment with Thai language embeddings using real-world datasets.
 
@@ -90,6 +83,15 @@ python quick_start.py
 python quick_start.py
 ```
 แล้วเลือกข้อ 3
+
+<p align="center">
+  <img src="assets/images/image1.png" alt="Thai Text Embedding Visualization" width="350"/>
+  <img src="assets/images/image2.png" alt="Thai Text Processing Pipeline" width="350"/>
+</p>
+
+<p align="center">
+  <em>Left: t-SNE visualization of Thai text embeddings | Right: Thai text preprocessing and tokenization pipeline</em>
+</p>
 
 ## Using Real Thai Datasets from Hugging Face
 
