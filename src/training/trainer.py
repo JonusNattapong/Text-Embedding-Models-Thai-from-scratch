@@ -24,8 +24,8 @@ import numpy as np
 from tqdm import tqdm
 import wandb
 
-from ..models.thai_embedding_model import ThaiEmbeddingModel, ContrastiveLoss
-from ..utils.metrics import compute_similarity_metrics, compute_clustering_metrics
+from models.thai_embedding_model import ThaiEmbeddingModel, ContrastiveLoss
+from utils.metrics import compute_similarity_metrics, compute_clustering_metrics
 
 
 @dataclass
@@ -179,7 +179,7 @@ class ThaiEmbeddingTrainer:
             'pooling_strategy': self.config.pooling_strategy
         }
         
-        from ..models.thai_embedding_model import create_thai_embedding_model
+        from models.thai_embedding_model import create_thai_embedding_model
         return create_thai_embedding_model(model_config)
     
     def _create_optimizer(self) -> optim.Optimizer:

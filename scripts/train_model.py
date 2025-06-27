@@ -166,35 +166,35 @@ def main():
     # Create training configuration
     training_config = TrainingConfig(
         vocab_size=tokenizer.get_vocab_size(),
-        d_model=config['model']['d_model'],
-        n_heads=config['model']['n_heads'],
-        n_layers=config['model']['n_layers'],
-        d_ff=config['model']['d_ff'],
-        max_seq_len=config['model']['max_seq_len'],
-        dropout=config['model']['dropout'],
-        pooling_strategy=config['model']['pooling_strategy'],
+        d_model=int(config['model']['d_model']),
+        n_heads=int(config['model']['n_heads']),
+        n_layers=int(config['model']['n_layers']),
+        d_ff=int(config['model']['d_ff']),
+        max_seq_len=int(config['model']['max_seq_len']),
+        dropout=float(config['model']['dropout']),
+        pooling_strategy=str(config['model']['pooling_strategy']),
         
-        batch_size=config['training']['batch_size'],
-        learning_rate=config['training']['learning_rate'],
-        num_epochs=config['training']['num_epochs'],
-        warmup_steps=config['training']['warmup_steps'],
-        weight_decay=config['training']['weight_decay'],
-        gradient_clipping=config['training']['gradient_clipping'],
+        batch_size=int(config['training']['batch_size']),
+        learning_rate=float(config['training']['learning_rate']),
+        num_epochs=int(config['training']['num_epochs']),
+        warmup_steps=int(config['training']['warmup_steps']),
+        weight_decay=float(config['training']['weight_decay']),
+        gradient_clipping=float(config['training']['gradient_clipping']),
         
-        loss_function=config['training']['loss_function'],
-        temperature=config['training']['temperature'],
-        margin=config['training']['margin'],
+        loss_function=str(config['training']['loss_function']),
+        temperature=float(config['training']['temperature']),
+        margin=float(config['training']['margin']),
         
-        validation_steps=config['training']['validation_steps'],
-        save_steps=config['training']['save_steps'],
-        early_stopping_patience=config['training']['early_stopping_patience'],
+        validation_steps=int(config['training']['validation_steps']),
+        save_steps=int(config['training']['save_steps']),
+        early_stopping_patience=int(config['training']['early_stopping_patience']),
         
-        output_dir=config['paths']['output_dir'],
-        log_dir=config['paths']['log_dir'],
+        output_dir=str(config['paths']['output_dir']),
+        log_dir=str(config['paths']['log_dir']),
         
-        use_wandb=config['monitoring']['use_wandb'],
-        wandb_project=config['monitoring']['wandb_project'],
-        log_level=config['monitoring']['log_level']
+        use_wandb=bool(config['monitoring']['use_wandb']),
+        wandb_project=str(config['monitoring']['wandb_project']),
+        log_level=str(config['monitoring']['log_level'])
     )
     
     # Create data loaders
