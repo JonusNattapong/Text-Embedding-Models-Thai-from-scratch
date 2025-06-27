@@ -1,6 +1,24 @@
-# Thai Text Embedding Model from Scratch
+# <img src="assets/images/logo.png" alt="Thai Embedding Logo" width="120" style="vertical-align:middle; margin-right:10px;"/> Thai Text Embedding Model from Scratch
+
+<p align="center">
+  <img src="assets/images/image1.png" alt="Thai Text Embedding Visualization" width="350"/>
+  <img src="assets/images/image2.png" alt="Thai Text Processing Pipeline" width="350"/>
+</p>
+
+<p align="center">
+  <em>Left: t-SNE visualization of Thai text embeddings | Right: Thai text preprocessing and tokenization pipeline</em>
+</p>
 
 A modern, extensible codebase for building Thai text embedding models from scratch. This project is designed for both researchers and practitioners who want to understand, train, and experiment with Thai language embeddings using real-world datasets.
+
+## 🚀 Key Highlights
+
+- **🇹🇭 Thai Language Optimized**: Specialized preprocessing for Thai text (no word boundaries, complex script)
+- **🏗️ Built from Scratch**: Transformer-based model with full control over architecture and training
+- **📚 Real Dataset Ready**: Seamless integration with Hugging Face Thai datasets
+- **📊 Comprehensive Evaluation**: Similarity, clustering, retrieval, and visualization tools
+- **🔧 Research-Friendly**: Modular codebase for easy experimentation and extension
+- **⚡ Quick Start**: Get running in minutes with sample data or scale to millions of sentences
 
 ## Overview
 
@@ -14,6 +32,10 @@ This repository provides:
 ## Why Thai Text Embedding?
 
 Thai language has unique characteristics (no spaces between words, complex script) that require specialized models and preprocessing. This project demonstrates how to build such a model from the ground up, with flexibility to use both sample and large-scale real datasets.
+
+The images above show:
+1. **t-SNE Visualization**: How the model learns to cluster semantically similar Thai sentences in embedding space
+2. **Processing Pipeline**: The complete flow from raw Thai text to clean, tokenized input ready for model training
 
 ## Project Structure
 
